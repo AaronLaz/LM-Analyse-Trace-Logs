@@ -28,7 +28,10 @@ else ?>
  <?php if ($c!="." && $c!=".."): ?>
 	<tr>
             <td><?=$c;?></td>
-            <td><a href="">Afficher</a></td>
+            <td><form method="get" action="../controllers/read_file.php">
+                <button type="submit" name="read"
+                        class="button" value=<?=$c?>>Afficher</button>
+            </form> </td>
 			<td><form method="get" action="../controllers/delete.php">
     <button type="submit" name="delete"
             class="button" value=<?=$c?>>X</button>
